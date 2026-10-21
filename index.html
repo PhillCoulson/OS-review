@@ -151,7 +151,14 @@ tbody th { font-weight: 500; }
 .lecture-sources li { display: flex; gap: 16px; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--soft-line); overflow-wrap: anywhere; }
 .lecture-sources span { flex-shrink: 0; color: var(--muted); }
 .page-footer { position: relative; margin-top: 18px; padding-right: 90px; color: var(--muted); font-size: 10px; line-height: 1.9; }
-.page-footer a { position: absolute; right: 0; top: 0; }
+.page-footer > .back-to-top { position: absolute; right: 0; top: 0; }
+.footer-links { display: flex; flex-direction: column; margin-top: 8px; }
+.footer-link { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 30px; padding: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 22px; font-weight: 400; text-decoration: none; white-space: nowrap; }
+.footer-link svg { width: 16px; height: 16px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.footer-link strong { font-weight: 700; }
+.footer-link:hover { color: var(--rose); }
+.footer-link:hover span { text-decoration: underline; text-underline-offset: 4px; }
+.footer-link:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
 .empty-state { padding: 55px 24px; border: 1px solid var(--line); text-align: center; margin-bottom: 24px; }
 .empty-state h2 { font-size: 23px; font-weight: 500; margin: 7px 0; }
 .empty-state p:not(.eyebrow) { color: var(--muted); font-size: 13px; }
@@ -286,7 +293,8 @@ tbody th { font-weight: 500; }
   .source-details, .source-issues { font-size: 11px; }
   .lecture-sources li { gap: 10px; }
   .page-footer { padding-right: 0; }
-  .page-footer a { position: static; display: inline-block; margin-top: 10px; }
+  .page-footer > .back-to-top { position: static; display: inline-block; margin-top: 10px; }
+  .footer-link { font-size: 11px; }
   .question-dialog { width: calc(100% - 24px); max-height: 94dvh; }
   .dialog-panel { max-height: calc(94dvh - 2px); }
   .dialog-head { gap: 10px; padding: 18px 16px 15px; }
@@ -999,7 +1007,14 @@ tbody th { font-weight: 500; }
         <details class="source-details"><summary>试卷来源与可信度 · 3 份材料 / 72 道实际收录题</summary><ul class="paper-sources"><li><strong>2024 秋 · 26 题</strong><span>2024年秋操作系统期末考试试题（回忆版）.pdf · 10 页</span></li><li><strong>2025 秋 · 20 题</strong><span>2025年秋操作系统期末试题（回忆版）.pdf · 9 页</span></li><li><strong>2026 春 · 26 题</strong><span>2026春操作系统期末试题（回忆版）.pdf · 9 页</span></li></ul><ul class="source-issues"><li><strong>2024 秋：</strong>题干自述为考后回忆，不能保证原题题干和选项完全一致。未附官方答案。</li><li><strong>2025 秋：</strong>卷首标20道选择和6道解答，实际仅收录选择1—15、解答1—5。缺选择16—20及解答6，绝不补造。</li><li><strong>2025 秋：</strong>页尾说明带*内容由AI生成，选择3与选择4题号旁带*；它们不能当作已证实的考试原题。</li><li><strong>2025 秋：</strong>解答5包含磁盘与文件系统多个主题，仍保留一个原题ID，按小问关联知识点，不冒充多道独立大题。</li><li><strong>2026 春：</strong>未附官方答案；缺少页表项大小等局部条件已在对应题目中标记。</li></ul></details>
         <details class="source-details"><summary>课件清单 · 13 份 PDF / 928 页</summary><ul class="lecture-sources"><li>01-导论与操作系统结构--1节课.pdf<span>70 页</span></li><li>02-1-进程与线程-进程-1.5节课.pdf<span>86 页</span></li><li>02-2-进程与线程-线程--1.5节课.pdf<span>60 页</span></li><li>03-1-并发与同步-信号-1节课.pdf<span>48 页</span></li><li>03-2-并发与同步信号量-2节课.pdf<span>81 页</span></li><li>04-死锁-1节课.pdf<span>45 页</span></li><li>05-1-CPU调度与优化-调度-1节课.pdf<span>38 页</span></li><li>05-2-CPU调度与优化-优化-1节课.pdf<span>50 页</span></li><li>06-内存管理-2节课.pdf<span>105 页</span></li><li>07-虚拟内存-part1-1节课.pdf<span>60 页</span></li><li>07-虚拟内存-part2-2节课.pdf<span>68 页</span></li><li>08-IO与存储-2节课.pdf<span>117 页</span></li><li>09-文件系统-2节课.pdf<span>100 页</span></li></ul></details>
       </section>
-      <footer class="page-footer"><p>操作系统 · 章节复习档案　/　整理于 2026.10.21</p><a href="#top">返回顶部 ↑</a></footer>
+      <footer class="page-footer">
+        <p>操作系统 · 章节复习档案　/　整理于 2026.10.21</p>
+        <a class="back-to-top" href="#top">返回顶部 ↑</a>
+        <div class="footer-links">
+          <a class="github-repository-link footer-link" href="https://github.com/PhillCoulson/OS-review" target="_blank" rel="noopener noreferrer" aria-label="在 GitHub 上查看仓库并 Star（在新标签页打开）" title="打开 GitHub 仓库，为复习网页点 Star"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 19 4.77 5.07 5.07 0 0 0 18.91 1S17.73.65 15 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 8 18.13V22"/></svg><span lang="en">Star on GitHub</span></a>
+          <a class="related-review-link footer-link" href="https://phillcoulson.github.io/CompNet-review/" target="_blank" rel="noopener noreferrer" aria-label="在这里查看计算机网络复习网页（在新标签页打开）"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7m0-7L11 13"/><path d="M10 5H6a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-4"/></svg><span>在这里查看<strong>计算机网络</strong>复习网页</span></a>
+        </div>
+      </footer>
     </main>
     <aside class="sidebar" aria-label="章节目录与考频概览">
       <details class="toc" id="toc" open>
