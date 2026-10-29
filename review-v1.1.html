@@ -173,7 +173,7 @@ tbody th { font-weight: 500; }
 .dialog-head h2 { margin: 6px 0 9px; font-size: 22px; line-height: 1.5; font-weight: 600; }
 .dialog-head h2:focus { outline: none; }
 #question-source { color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
-.close-button { width: 42px; height: 42px; flex-shrink: 0; display: grid; place-items: center; border: 1px solid #87867f; font-size: 27px; line-height: 1; }
+.close-button { width: 42px; height: 42px; min-width: 0; min-height: 0; padding: 0; box-sizing: border-box; -webkit-appearance: none; appearance: none; flex-shrink: 0; display: grid; place-items: center; border: 1px solid #87867f; font-size: 27px; line-height: 1; }
 .dialog-actions { display: flex; flex-shrink: 0; gap: 10px; }
 .close-button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: square; stroke-linejoin: miter; }
 .resize-button .restore-icon { display: none; }
